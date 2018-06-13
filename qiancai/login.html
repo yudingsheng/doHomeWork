@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>登录</title>	
+		<link rel="stylesheet" type="text/css" href="css/gongyong.css"/>
+		<link rel="stylesheet" type="text/css" href="css/login.css"/>
+	</head>
+	<body>
+		
+		<div class="header">
+			<a href="#" class="fl"><img src="img/logo.png"/></a>
+			<ul class="fl">
+				<li><a href="homepage.html">首页</a></li>
+				<li><a href="product.html">快速选款</a></li>
+				<li><a href="Choi bao gia.html">彩宝裸石</a></li>
+				<li><a href="Fashion.html">时尚财宝</a></li>
+				<li><a href="custom.html">高级定制</a></li>
+				<li><a href="About thousand color.html">关于仟彩</a></li>
+			</ul>
+		</div>
+		
+		<div class="banner">
+			<div class="img">
+				<div class="inp">
+					<div class="but">
+						<button class="fl but1">登录</button>
+						<button class="fl but2">注册</button>
+					</div>
+					
+					<div class="inp1">
+						<div class="inp_left">
+							<span>账号</span><input  class="user" type="text" placeholder="请输入第一位大写字母6位数字"/>
+						</div>
+						<div class="inp_right">
+							<span>密码</span><input class="pass" type="password" placeholder="请输入任意的6位数字" />
+						</div>
+						<div class="forgetpw">
+							<a href="#">忘记密码？</a>
+						</div>
+						
+						<input type="submit" class="login1" name="" id="" value="登录" />
+						<div class="bom">
+							<div class="bom_l fl">
+								<input class="boml1 fl" type="checkbox"/> <p class="fl">下次自动登录</p>
+							</div>
+							<div class="bom_r fl">
+								<span>其他账号登录</span>
+								<a href="#"><img src="img/icon1.jpg"/></a>
+								<a href="#"><img src="img/icon2.png"/></a>
+							</div>
+						</div>
+					</div>
+					
+		
+					<div class="inp2">
+						<div class="inp_left">
+							<span>账号</span><input class="usern" type="text" placeholder="请输入第一位大写字母6位数字" />
+						</div>
+						<div class="inp_right">
+							<span>密码</span><input class="passw"  type="password" placeholder="请输入任意的6位数字" />
+						</div>
+						<div class="inp_right2">
+							<span>确认密码</span><input class="passwo" type="password" placeholder="请再输入密码" />
+						</div>
+						<button type="submit" class="login2">注册</button>
+					</div>
+					
+				</div>
+				<img src="img/shouye.png"/>
+			</div>
+		</div>
+	
+		<div class="footer">
+			<div class="footer_left fl">
+				<div class="footer_left_top">
+					<ul class="fl">
+						<li><a href="">首页</a></li>
+						<li><a href="">快速选款</a></li>
+						<li><a href="">彩宝裸石</a></li>
+						<li><a href="">时尚财宝</a></li>
+						<li><a href="">高级定制</a></li>
+						<li><a href="">关于仟彩</a></li>
+					</ul>
+				</div>
+				<div class="footer_left_bottom">
+					<img class="fl" src="img/logo.png"/>
+					<div class="font1 fl">
+						<p>2014-2015www.qiancai.com All Rights Reserved </p>
+						<p>粤TCP备12064735号</p>
+					</div>
+				</div>
+			</div>
+			<div class="footer_right fl">
+				<img src="img/footer.png" />
+			</div>
+		</div>
+	</body>
+</html>
+<script type="text/javascript" src="js/jquery-3.3.1(1).js" ></script>
+<script>
+	function click() {if (event.button==2) {alert('不许你偷看！');}}document.onmousedown=click
+
+	$(function(){
+		$(".but1").click(function(){
+			$(".inp1").show()
+			$(".inp2").hide()
+		})
+		$(".but2").click(function(){
+			$(".inp2").show()
+			$(".inp1").hide()
+		})
+	})
+	
+	
+	var Yds={
+		"userNameExeg":/^[A-Z]\w{6}$/,
+		"passExeg":/^\d{6}$/,
+		"chenUserName":function(userName){
+			if(this.userNameExeg.test(userName)){
+					return true;
+				}else{
+					return false;
+				}
+			},
+		"checkPwd":function(userpwd){
+			if(this.passExeg.test(userpwd)){
+					return true;
+				}else{
+					return false;
+				
+				}
+			}
+	}
+
+	document.getElementsByClassName("login2")[0].onclick=function(){
+			 var lu=document.getElementsByClassName("usern");
+			 if(Yds.chenUserName(lu[0].value)){
+				 }else{
+				 	alert("请输入正确的用户名")
+				 }
+				 
+			 var lu1=document.getElementsByClassName("passw");
+				 if(Yds.checkPwd(lu1[0].value)){
+				 }else{
+				 	alert("请输入密码")
+				}
+	
+		var lu=document.getElementsByClassName("passwo");
+			 if(Yds.checkPwd(lu1[0].value)==Yds.checkPwd(lu[0].value)){
+				 	alert("注册成功")
+				 	location="login.html";
+			}else{
+				 	alert("请输入正确密码")	
+				 }
+		}
+
+	document.getElementsByClassName("login1")[0].onclick=function(){
+		 var lu=document.getElementsByClassName("user");
+			 if(Yds.chenUserName(lu[0].value)){
+				 }else{
+				 	alert("请输入正确的用户名")
+				 }
+		 var lu=document.getElementsByClassName("pass");
+			 if(Yds.checkPwd(lu[0].value)){
+				 	alert("登录成功")
+				 	location="homepage.html";
+				 }else{
+				 	alert("请输入正确密码")
+			 	}
+	}
+		
+</script>
+

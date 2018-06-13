@@ -1,0 +1,17 @@
+body{background:#ffffff; margin:0px;padding:0px; font-size:12px; font-family:"宋体","SourceHanSansSC-Light","Microsoft Yahei",微软雅黑,"Helvetica Neue",Arial,sans-serif; width:100%; color:#3c5a98;}
+html,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,blockquote,p,img{padding:0; margin:0;}
+img{vertical-align:top; border:none;}
+button,select,textarea{outline:none}
+figure,form,fieldset{border:0;margin:0;padding:0}
+textarea{resize:none}
+ol,ul,li{list-style-type:none;}
+textarea:focus,input:focus{outline:none;}
+table{border-collapse:collapse; border-spacing:0; empty-cells:show;}
+a{color:#3c5899;text-decoration:none;}
+a:hover{color:#162e66;text-decoration:none;}
+b,strong{font-weight:normal;}
+cite,em,i{font-style:normal;}
+.c:after {content:"\200B"; display:block; height:0; clear:both;}
+.c{*zoom:1;}
+.fl{float:left;}
+.fr{float:right;}
